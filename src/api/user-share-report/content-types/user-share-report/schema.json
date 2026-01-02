@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_share_reports",
+  "info": {
+    "singularName": "user-share-report",
+    "pluralName": "user-share-reports",
+    "displayName": "User share report"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "user_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "current_share": {
+      "type": "integer",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "payment_year_scheme": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::payment-year-scheme.payment-year-scheme"
+    },
+    "start_date": {
+      "type": "date",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+}

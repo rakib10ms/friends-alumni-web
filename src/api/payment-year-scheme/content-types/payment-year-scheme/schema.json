@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "payment_year_schemes",
+  "info": {
+    "singularName": "payment-year-scheme",
+    "pluralName": "payment-year-schemes",
+    "displayName": "Payment year scheme"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "year_name": {
+      "type": "string",
+      "required": true
+    },
+    "year_date_from": {
+      "type": "date",
+      "required": true
+    },
+    "year_date_to": {
+      "type": "date",
+      "required": true
+    },
+    "amount": {
+      "type": "integer",
+      "required": true
+    }
+  }
+}

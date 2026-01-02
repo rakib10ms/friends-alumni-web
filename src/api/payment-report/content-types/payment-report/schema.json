@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "payment_reports",
+  "info": {
+    "singularName": "payment-report",
+    "pluralName": "payment-reports",
+    "displayName": "Payment report"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "payment_date": {
+      "type": "date",
+      "required": true
+    },
+    "payment_receipt": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "payment_status_verified": {
+      "type": "boolean",
+      "required": false,
+      "default": false
+    },
+    "uploaded_by": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "paid_by": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "payment_amount": {
+      "type": "integer"
+    },
+    "current_share": {
+      "type": "integer"
+    }
+  }
+}

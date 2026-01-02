@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "notifications",
+  "info": {
+    "singularName": "notification",
+    "pluralName": "notifications",
+    "displayName": "Notification"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "body": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": ["PaymentReceived", "PaymentReminder"]
+    },
+    "isRead": {
+      "type": "boolean",
+      "default": false
+    },
+    "target": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "string"
+    },
+    "iconColor": {
+      "type": "string"
+    },
+    "uploaded_by": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "paid_by": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    }
+  }
+}
